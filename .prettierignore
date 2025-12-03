@@ -1,0 +1,15 @@
+.next
+node_modules
+public
+pnpm-lock.yaml
+yarn.lock
+ANALISE_PROJETO.md
+ANALISE_TOT_PACKAGE_MANAGER.md
+package-lock.json
+yarn.lock
+dist
+build
+coverage
+.vscode
+.idea
+
