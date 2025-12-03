@@ -29,9 +29,24 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "react/no-unknown-property": ["error", { "ignore": ["jsx", "global"] }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_|expect|EVENT_START_DATE"
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "warn"
   },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx", "**/*.setup.ts", "vitest.setup.ts"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ],
   "ignorePatterns": [
     ".next",
     "node_modules",

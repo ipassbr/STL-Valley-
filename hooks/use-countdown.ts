@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { EVENT_START_DATE, EVENT_TIMEZONE } from "@/config/site"
+import { EVENT_START_DATE } from "@/config/site"
 
 /**
  * Interface para o tempo restante
