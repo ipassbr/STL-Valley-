@@ -81,14 +81,17 @@ export function AccommodationTypesSection() {
 
                   {/* Features Icons */}
                   <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8">
-                    {accommodation.features.map((feature, idx) => (
-                      <div key={idx} className="flex flex-col items-center gap-2">
-                        <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
-                          <feature.icon className="w-7 h-7 text-white" />
+                    {accommodation.features.map((feature, idx) => {
+                      const Icon = feature.icon
+                      return (
+                        <div key={idx} className="flex flex-col items-center gap-2">
+                          <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                            <Icon className="w-7 h-7 text-white" />
+                          </div>
+                          <span className="text-white/90 text-sm font-medium">{feature.label}</span>
                         </div>
-                        <span className="text-white/90 text-sm font-medium">{feature.label}</span>
-                      </div>
-                    ))}
+                      )
+                    })}
                   </div>
 
                   {/* Price & CTA */}
