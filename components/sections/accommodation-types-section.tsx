@@ -72,42 +72,42 @@ export function AccommodationTypesSection() {
               >
                 {/* Content Side */}
                 <div className="flex-1 text-center lg:text-left w-full">
-                  <span className="text-white/90 font-medium uppercase tracking-widest text-xs sm:text-sm">
+                  <span className="text-white/95 font-semibold uppercase tracking-wider text-sm sm:text-base mb-3 sm:mb-4 block">
                     {accommodation.subtitle}
                   </span>
                   <h2
                     id={index === 0 ? "hospedagem-tipos-heading" : undefined}
-                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 sm:mt-3 mb-3 sm:mb-4 drop-shadow-lg px-2 sm:px-0"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 drop-shadow-xl px-2 sm:px-0 leading-tight"
                   >
                     {accommodation.title}
                   </h2>
-                  <p className="text-white/90 text-base sm:text-lg mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0 drop-shadow-md px-2 sm:px-0">
+                  <p className="text-white/95 text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-lg mx-auto lg:mx-0 drop-shadow-md px-2 sm:px-0 leading-relaxed">
                     {accommodation.description}
                   </p>
 
                   {/* Features Icons */}
-                  <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 mb-6 sm:mb-8" role="list">
+                  <div className="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-8 mb-8 sm:mb-10" role="list">
                     {accommodation.features.map((feature, idx) => {
                       const Icon = feature.icon
                       return (
-                        <div key={idx} className="flex flex-col items-center gap-1.5 sm:gap-2" role="listitem">
+                        <div key={idx} className="flex flex-col items-center gap-2 sm:gap-2.5" role="listitem">
                           <div
-                            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center border-2 border-white/50 shadow-lg"
+                            className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-white/40 backdrop-blur-md flex items-center justify-center border-2 border-white/60 shadow-xl transition-all duration-300 hover:scale-110 hover:bg-white/50 hover:border-white/80"
                             aria-hidden="true"
                           >
-                            <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
+                            <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white drop-shadow-lg" />
                           </div>
-                          <span className="text-white font-semibold text-xs sm:text-sm drop-shadow-md text-center">{feature.label}</span>
+                          <span className="text-white font-semibold text-sm sm:text-base drop-shadow-lg text-center max-w-[100px]">{feature.label}</span>
                         </div>
                       )
                     })}
                   </div>
 
                   {/* Price & CTA */}
-                  <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0">
+                  <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 justify-center lg:justify-start px-2 sm:px-0 mb-6 sm:mb-8">
                     <Button
                       size="lg"
-                      className="bg-white text-foreground hover:bg-white/90 font-semibold px-6 sm:px-8 rounded-full focus-visible:ring-2 focus-visible:ring-offset-2 min-h-[48px] w-full sm:w-auto text-sm sm:text-base"
+                      className="bg-white text-foreground hover:bg-white/95 active:bg-white/90 font-bold px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out hover:scale-105 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent min-h-[52px] w-full sm:w-auto text-base sm:text-lg"
                       asChild
                     >
                       <a href={`#${accommodation.id}`}>Saiba Mais</a>
@@ -115,16 +115,16 @@ export function AccommodationTypesSection() {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-2 border-white text-white hover:bg-white/10 font-semibold px-6 sm:px-8 rounded-full bg-transparent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white min-h-[48px] w-full sm:w-auto text-sm sm:text-base"
+                      className="border-2 border-white text-white hover:bg-white/15 active:bg-white/10 font-bold px-8 sm:px-10 py-6 sm:py-7 rounded-full bg-transparent backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent min-h-[52px] w-full sm:w-auto text-base sm:text-lg"
                       asChild
                     >
                       <a href="#hospedagem">Reservar Agora</a>
                     </Button>
                   </div>
 
-                  <div className="mt-4 sm:mt-6 text-white px-2 sm:px-0">
-                    <span className="text-2xl sm:text-3xl font-bold drop-shadow-lg">{accommodation.price}</span>
-                    <span className="text-white/90 ml-2 text-sm sm:text-base drop-shadow-md">{accommodation.priceNote}</span>
+                  <div className="mt-6 sm:mt-8 text-white px-2 sm:px-0">
+                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-xl">{accommodation.price}</span>
+                    <span className="text-white/95 ml-3 text-base sm:text-lg font-medium drop-shadow-lg">{accommodation.priceNote}</span>
                   </div>
                 </div>
 
@@ -132,18 +132,12 @@ export function AccommodationTypesSection() {
                 <div className="flex-1 relative w-full order-2 lg:order-1">
                   <div className="relative">
                     {/* Organic blob shape container */}
-                    <div
-                      className="relative w-full aspect-[4/5] max-w-xs sm:max-w-sm md:max-w-md mx-auto overflow-hidden transition-transform duration-700 ease-out hover:scale-[1.02]"
-                      style={{
-                        borderRadius: "60% 40% 55% 45% / 55% 50% 50% 45%",
-                        filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))",
-                      }}
-                    >
+                    <div className="relative w-full aspect-[4/5] max-w-xs sm:max-w-sm md:max-w-md mx-auto overflow-hidden rounded-[60%_40%_55%_45%_/_55%_50%_50%_45%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-700 ease-in-out hover:scale-[1.02] hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.4)]">
                       <Image
                         src={accommodation.image || "/placeholder.svg"}
                         alt={`Imagem da ${accommodation.title.toLowerCase()}, mostrando ${accommodation.subtitle.toLowerCase()}`}
                         fill
-                        className="object-cover transition-transform duration-700 ease-out hover:scale-110"
+                        className="object-cover transition-transform duration-700 ease-in-out hover:scale-110"
                         loading="lazy"
                         sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 40vw"
                         quality={85}
@@ -152,50 +146,48 @@ export function AccommodationTypesSection() {
 
                     {/* Floating badge */}
                     <div
-                      className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md rounded-full px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 shadow-2xl flex items-center gap-2 sm:gap-3 border border-white/50 transition-all duration-300 hover:scale-105 hover:shadow-3xl"
+                      className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md rounded-full px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 shadow-2xl flex items-center gap-3 sm:gap-3.5 border-2 border-white/60 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-white"
                       aria-label="Badge STL Valley"
                     >
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-primary/15 flex items-center justify-center transition-transform duration-300 hover:scale-110" aria-hidden="true">
-                        <Tent className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-primary" />
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-primary/20 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110" aria-hidden="true">
+                        <Tent className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 text-primary" />
                       </div>
-                      <span className="font-bold text-foreground whitespace-nowrap text-sm sm:text-base">STL Valley</span>
+                      <span className="font-bold text-foreground whitespace-nowrap text-base sm:text-lg">STL Valley</span>
                     </div>
 
                     {/* Navigation arrows */}
                     <button
                       className={cn(
-                        "absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 shadow-lg",
+                        "absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full backdrop-blur-md flex items-center justify-center text-white border-2 border-white/30 transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent shadow-lg",
                         index === 0 
                           ? "bg-white/10 opacity-50 cursor-not-allowed" 
-                          : "bg-white/20 hover:bg-white/30 hover:scale-110 hover:shadow-xl"
+                          : "bg-white/25 hover:bg-white/40 hover:border-white/50 hover:scale-110 hover:shadow-xl active:scale-95"
                       )}
                       aria-label={`Ver ${index > 0 ? accommodations[index - 1].title : "acomodação anterior"}`}
                       disabled={index === 0}
                     >
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={2}
                           d="M15 19l-7-7 7-7"
                         />
                       </svg>
                     </button>
                     <button
                       className={cn(
-                        "absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 shadow-lg",
+                        "absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full backdrop-blur-md flex items-center justify-center text-white border-2 border-white/30 transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent shadow-lg",
                         index === accommodations.length - 1
                           ? "bg-white/10 opacity-50 cursor-not-allowed"
-                          : "bg-white/20 hover:bg-white/30 hover:scale-110 hover:shadow-xl"
+                          : "bg-white/25 hover:bg-white/40 hover:border-white/50 hover:scale-110 hover:shadow-xl active:scale-95"
                       )}
                       aria-label={`Ver ${index < accommodations.length - 1 ? accommodations[index + 1].title : "próxima acomodação"}`}
                       disabled={index === accommodations.length - 1}
                     >
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={2}
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
