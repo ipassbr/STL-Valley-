@@ -33,8 +33,7 @@ export default function SceneCanvas({ background = 0x0a0a0a }: Props) {
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false })
-    renderer.physicallyCorrectLights = true
-    renderer.outputColorSpace = (THREE as any).SRGBColorSpace ?? (THREE as any).sRGBEncoding
+    renderer.outputColorSpace = THREE.SRGBColorSpace
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.setSize(container.clientWidth, container.clientHeight, false)
     rendererRef.current = renderer

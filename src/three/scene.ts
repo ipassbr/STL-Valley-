@@ -48,8 +48,7 @@ export function createWebGLRenderer(
   } = options || {}
 
   const renderer = new THREE.WebGLRenderer({ antialias, alpha })
-  renderer.physicallyCorrectLights = true
-  renderer.outputColorSpace = (THREE as any).SRGBColorSpace ?? (THREE as any).sRGBEncoding
+  renderer.outputColorSpace = THREE.SRGBColorSpace
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, maxPixelRatio))
   renderer.setSize(container.clientWidth, container.clientHeight, false)
   
@@ -72,7 +71,7 @@ export function setupBasicLighting(scene: THREE.Scene): void {
  * Disposes of Three.js resources to prevent memory leaks
  */
 export function disposeResources(
-  object: THREE.Object3D | THREE.Material | THREE.Geometry | THREE.Texture
+  object: THREE.Object3D | THREE.Material | THREE.BufferGeometry | THREE.Texture
 ): void {
   if (object instanceof THREE.Object3D) {
     object.traverse((child) => {
@@ -89,7 +88,7 @@ export function disposeResources(
     })
   } else if (object instanceof THREE.Material) {
     object.dispose()
-  } else if (object instanceof THREE.Geometry) {
+  } else if (object instanceof THREE.BufferGeometry) {
     object.dispose()
   } else if (object instanceof THREE.Texture) {
     object.dispose()
