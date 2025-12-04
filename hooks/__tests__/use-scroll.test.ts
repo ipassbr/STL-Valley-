@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest"
-import { renderHook } from "@testing-library/react"
+import { renderHook, waitFor } from "@testing-library/react"
 import { useScroll } from "../use-scroll"
 
 describe("useScroll", () => {
@@ -37,9 +37,9 @@ describe("useScroll", () => {
     expect(result.current).toBe(true)
   })
 
-  it("deve atualizar quando scrollY muda", () => {
+  it("deve atualizar quando scrollY muda", async () => {
     window.scrollY = 30
-    const { result, rerender } = renderHook(() => useScroll(50))
+    const { result } = renderHook(() => useScroll(50))
 
     expect(result.current).toBe(false)
 
@@ -52,9 +52,11 @@ describe("useScroll", () => {
 
     // Dispara evento de scroll
     window.dispatchEvent(new Event("scroll"))
-    rerender()
 
-    expect(result.current).toBe(true)
+    // Aguarda o requestAnimationFrame executar
+    await waitFor(() => {
+      expect(result.current).toBe(true)
+    })
   })
 })
 
