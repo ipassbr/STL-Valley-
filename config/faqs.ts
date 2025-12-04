@@ -54,3 +54,4 @@ export const faqSectionConfig = {
   contactText: "Ainda tem dúvidas? Entre em contato conosco",
 }
 
+

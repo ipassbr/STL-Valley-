@@ -10,9 +10,9 @@
 export const EVENT_START_DATE = new Date("2026-06-03T00:00:00-03:00")
 
 /**
- * Data de fim do evento (10 de junho de 2026, 23:59:59 horário de Brasília)
+ * Data de fim do evento (07 de junho de 2026, 23:59:59 horário de Brasília)
  */
-export const EVENT_END_DATE = new Date("2026-06-10T23:59:59-03:00")
+export const EVENT_END_DATE = new Date("2026-06-07T23:59:59-03:00")
 
 /**
  * Data de check-in (03 de junho de 2026, 12:00:00 horário de Brasília)
@@ -20,9 +20,9 @@ export const EVENT_END_DATE = new Date("2026-06-10T23:59:59-03:00")
 export const CHECK_IN_DATE = new Date("2026-06-03T12:00:00-03:00")
 
 /**
- * Data de check-out (10 de junho de 2026, 14:00:00 horário de Brasília)
+ * Data de check-out (07 de junho de 2026, 14:00:00 horário de Brasília)
  */
-export const CHECK_OUT_DATE = new Date("2026-06-10T14:00:00-03:00")
+export const CHECK_OUT_DATE = new Date("2026-06-07T14:00:00-03:00")
 
 /**
  * Ano do evento
@@ -32,12 +32,12 @@ export const EVENT_YEAR = 2026
 /**
  * Período do evento formatado para exibição
  */
-export const EVENT_PERIOD = "03 a 10 de Junho de 2026"
+export const EVENT_PERIOD = "do dia 03 ao dia 07 de Junho de 2026"
 
 /**
  * Período do evento formatado (versão curta)
  */
-export const EVENT_PERIOD_SHORT = "03 a 10 de Junho"
+export const EVENT_PERIOD_SHORT = "do dia 03 ao dia 07 de Junho"
 
 /**
  * Timezone do evento (America/Sao_Paulo)

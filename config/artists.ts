@@ -39,3 +39,4 @@ export const artistsSectionConfig = {
   exclusiveBadge: "Acesso exclusivo para hóspedes",
 }
 
+

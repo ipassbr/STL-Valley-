@@ -65,3 +65,4 @@ export const accommodationPlans: AccommodationPlan[] = [
 export const pricingNotice =
   "O ingresso do festival é obrigatório e vendido separadamente."
 
+

@@ -14,7 +14,7 @@
 
 Landing page moderna e responsiva para o camping oficial do Festival STL 2026 em São Tomé das Letras. Desenvolvida com Next.js 16, React 19 e TypeScript, oferecendo uma experiência completa de hospedagem com estrutura premium, shows exclusivos e comodidades de alto nível.
 
-**Evento:** 03 a 10 de Junho de 2026  
+**Evento:** do dia 03 ao dia 07 de Junho de 2026  
 **Localização:** São Tomé das Letras, MG
 
 ---
@@ -153,7 +153,7 @@ npm run test:coverage    # Executa testes com cobertura
 1. **✅ Correção de Data do Evento**
    - Data centralizada em `config/site.ts`
    - Hook `useCountdown` com suporte a timezone
-   - Evento: 03 a 10 de Junho de 2026
+   - Evento: do dia 03 ao dia 07 de Junho de 2026
 
 2. **✅ Configuração ESLint e Prettier**
    - ESLint configurado (next/core-web-vitals)

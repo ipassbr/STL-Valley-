@@ -119,3 +119,4 @@ export const amenitiesSectionConfig = {
   description: "Tudo que você precisa para uma experiência incrível",
 }
 
+
